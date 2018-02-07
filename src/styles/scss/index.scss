@@ -1,0 +1,127 @@
+$width:100%;
+$height:50px;
+$darkBlue:#385a88;
+$lightBlue:#2a98f1;
+$green:#5fb55c;
+$lightGrey:#e8eaf6;
+$red:#e41b1d;
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.filter-area {
+    height: $height;
+    font-weight: bold;
+
+    div {
+        display: inline-block;
+        width: $width/3;
+        height: inherit;
+        line-height: $height;
+        background-color: $lightBlue;
+        border-bottom: 3px solid $lightBlue;
+        color: $darkBlue;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .active {
+        color: #fff;
+        border-bottom: 3px solid $darkBlue;
+        cursor: default;
+    }
+}
+
+.msg-list {
+    margin: 20px 30px;
+    padding-bottom: $height;
+    li {
+        list-style-type: none;
+        padding-top: 15px;
+        height: $height;
+        line-height: $height;
+        cursor: default; // display: flex;
+        align-items: center;
+
+        .check-box {
+            width: 6%;
+            text-align: center;
+            float: left;
+        }
+    }
+}
+
+
+.msg {
+    height: inherit;
+    display: inline-flex;
+    border: 1px solid;
+    border-radius: 10px;
+    vertical-align: middle;
+    width: 93%;
+
+    div {
+        height: inherit;
+        margin-right: 10px;
+    }
+
+    .icon {
+        flex: 0 0 $height;
+        width: $height;
+        img {
+            height: 45px;
+            margin: ($height - 45px)/2 5px;
+        }
+    }
+    .title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+    }
+    .view-btn {
+        flex: 0 0 70px;
+        width: 70px;
+
+        a {
+            color: #fff;
+            background-color: $green;
+            width: 70px;
+            height: $height/2;
+            line-height: $height/2;
+            border-radius: 5px;
+            display: inline-block;
+    		text-align: center;
+    		text-decoration-line: none;
+    		font-weight: bold;
+        }
+    }
+}
+
+.action-bar {
+    position: fixed;
+    bottom: 0;
+    width: $width;
+    text-align: center;
+    height: $height;
+    vertical-align: middle;
+    background-color: $lightGrey;
+
+    .act-btn {
+        width: 80px;
+        height: 30px;
+        margin: ($height - 30px)/2 15px;
+        background-color: #fff;
+        box-shadow: 0px 2px 2px $lightGrey/2;
+        border: none;
+    	border-radius: 3px;
+    	font-weight: bold;
+    }
+    .del {
+        color: #fff;
+        background-color: $red;
+    }
+}
+
