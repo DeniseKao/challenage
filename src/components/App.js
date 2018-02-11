@@ -23,7 +23,8 @@ class App extends Component {
 
   handleScroll() {
     const html = document.documentElement;
-    if (html.scrollHeight - html.scrollTop === html.clientHeight) {
+    const scrollTop = html.scrollTop ? html.scrollTop : window.pageYOffset
+    if (html.scrollHeight - scrollTop <= html.clientHeight + 80 ) {
       this.props.dispatch(fetchMsgsIfNeeded())
     } 
   }
